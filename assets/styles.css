@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3rem;
+    background-color: #f1f1f1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container h1 {
+    font-size: 4rem;
+}
+
+.timer {
+    display: flex;
+    font-size: 10rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(156, 24, 24);
+    min-width: 13rem;
+}
+
+.separator {
+    margin: 0 10px;
+    margin-bottom: 3%;
+}
+
+#milliseconds {
+    font-size: 5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid rgb(156, 24, 24);
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.15);
+    background-color:  rgba(156, 24, 24, 0.349);
+    box-shadow:  0 0 15px black;
+}
+
+#startBtn {
+    color: rgb(156, 24, 24);
+    text-transform: uppercase;
+}
+
+#pauseBtn, #resumeBtn {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+        gap: 1rem;
+    }
+
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .timer {
+        font-size: 5rem;
+    }
+
+    .time {
+        min-width: 8rem;
+    }
+
+    #milliseconds {
+        font-size: 3rem;
+    }
+
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+
+    .time {
+        min-width: 5rem;
+    }
+
+    #milliseconds {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+    }
+}
